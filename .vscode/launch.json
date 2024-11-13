@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DBG Python",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run BBSolver",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/codes/bbsolver.py",
+            "args": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run EPANET3 (Debug)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/epanet-dev/build/x64-Debug/bin/run-epanet3",
+            "args": [
+                "${workspaceFolder}/dataset/any-town.inp", 
+                "${workspaceFolder}/dataset/any-town.rpt",
+                "${workspaceFolder}/dataset/any-town.out"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-debug",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Run EPANET3 (Release)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/epanet-dev/build/release/bin/run-epanet3",
+            "args": [
+                "${workspaceFolder}/dataset/any-town.inp", 
+                "${workspaceFolder}/dataset/any-town.rpt"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-release",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Run unittest",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "unittest",
+            "args": [
+                "codes/bbsolver_test.py"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
