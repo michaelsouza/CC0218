@@ -154,10 +154,10 @@ Considere os seguintes conjuntos de dados:
 (c) Qual conjunto apresenta maior variabilidade relativa? Justifique por que o CV é mais adequado para esta comparação do que o desvio padrão.  
 (d) Em quais situações práticas o uso do CV seria mais apropriado do que o desvio padrão?
 
-### **Exercício 19: Correlação entre Y, Z e X**
+### **Exercício 19: Correlação entre variáveis quantitativas**
 Determine se $Y$ ou $Z$ estão mais correlacionadas com a variável $X$. Justifique sua resposta.
 
-| $X$  | $Y$  | $Z$  |
+| $X$    | $Y$    | $Z$    |
 |--------|--------|--------|
 | 41     | 52     | 60     |
 | 73     | 95     | 35     |
@@ -165,7 +165,7 @@ Determine se $Y$ ou $Z$ estão mais correlacionadas com a variável $X$. Justifi
 | 37     | 52     | 80     |
 | 58     | 96     | 50     |
 
-### **Exercício 20: Correlação entre Sexo e Frequência de Atividades Físicas**
+### **Exercício 20: Correlação entre variáveis qualitativas**
 Considerando os dados da tabela abaixo, podemos dizer que há correlação entre o sexo e a frequência de atividades físicas? Justifique sua resposta.
 
 | **Frequência de Atividades** | **H**  | **M**  | **Total** |
@@ -175,8 +175,27 @@ Considerando os dados da tabela abaixo, podemos dizer que há correlação entre
 | **Eventual**                 | 31     | 10     | 41        |
 | **Total**                    | 193    | 209    | 402       |
 
-### **Exercício 21: Z-score de João**
-Sabendo que a média e a variância das notas dos alunos de Cálculo da turma A foram iguais a 4, qual é o **Z-score** de João se sua nota foi 8?
 
-### **Exercício 22: Comparação de Desempenho entre Flávio e João**
-Na turma B, a média das notas em Cálculo foi de 7 e o desvio padrão foi 1. Sabendo que Flávio também tirou 9, você acha que Flávio se saiu melhor que João quando comparado aos demais alunos de suas respectivas turmas? Justifique sua resposta.
+### **Exercício 21: Correlação entre variáveis qualitativas e quantitativas**
+
+Uma empresa deseja analisar se há uma relação entre o setor de atuação dos funcionários (Administrativo, Financeiro, Operacional) e o salário mensal recebido. Para isso, foram coletados dados de uma amostra de funcionários, conforme a tabela abaixo:
+
+| **Nome**        | **Setor**      | **Salário Mensal (R$)** |
+|-----------------|----------------|-------------------------|
+| Ana Silva       | Administrativo | 3.500                   |
+| Maria Oliveira  | Administrativo | 3.600                   |
+| João Santos     | Administrativo | 3.800                   |
+| Julia Lima      | Financeiro     | 4.300                   |
+| Pedro Costa     | Financeiro     | 4.200                   |
+| Lucas Pereira   | Financeiro     | 4.500                   |
+| Paula Martins   | Operacional    | 2.900                   |
+| Rita Santos     | Operacional    | 2.700                   |
+| Bruno Ferreira  | Operacional    | 3.000                   |
+| Carlos Souza    | Operacional    | 2.800                   |
+
+
+### **Exercício 22: Z-score 1**
+Sabendo que a média e a variância das notas dos alunos de Cálculo da turma $A$ foram iguais a 4, qual é o **Z-score** de João se sua nota foi 8?
+
+### **Exercício 23: Z-score 2**
+Na turma $B$, a média das notas em Cálculo foi de 7 e o desvio padrão foi 1. Sabendo que Flávio também tirou 9, você acha que Flávio se saiu melhor que João quando comparado aos demais alunos de suas respectivas turmas? Justifique sua resposta.
