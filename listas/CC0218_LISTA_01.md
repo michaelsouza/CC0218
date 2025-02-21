@@ -1,7 +1,41 @@
 ## CC0218 - LISTA 01
 
-### **Exercício 1: Análise do Número de Erros por Página**
-Quer-se estudar o número de erros de impressão de um livro. A tabela abaixo apresenta os dados coletados em uma amostra de 50 páginas:
+#### Exercício: Dados Brutos
+Os dados sobre o número de casas em quarteirões de uma cidade são:
+
+2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5, 10, 10, 10, 10, 10, 15, 15, 15, 15, 20, 20, 20, 20, 25, 25, 25, 25, 25, 30, 30, 30, 30, 30, 30, 30, 30, 30, 50, 50, 50, 50, 50, 50, 80, 80, 80, 80, 80.
+
+<div>
+a) Calcule a mediana.<br>
+b) Construa uma tabela com frequências e proporções.
+</div>
+
+***Respostas***
+
+a) Há 50 observações. Para dados ordenados, a mediana é a média do 25º e 26º elemento.  
+Conforme indicado, os 25º valores correspondem a 20 e os 26º a 25, de modo que
+
+$$\text{Mediana} = \frac{20 + 25}{2} = 22{,}5.$$
+
+b) Primeiro, listamos os valores distintos com suas frequências:
+
+| Valor | Frequência | Proporção  |
+|:-----:|:----------:|:----------:|
+| 2     | 4          | 4/50 = 0,08  |
+| 3     | 4          | 4/50 = 0,08  |
+| 5     | 4          | 4/50 = 0,08  |
+| 10    | 5          | 5/50 = 0,10  |
+| 15    | 4          | 4/50 = 0,08  |
+| 20    | 4          | 4/50 = 0,08  |
+| 25    | 5          | 5/50 = 0,10  |
+| 30    | 9          | 9/50 = 0,18  |
+| 50    | 6          | 6/50 = 0,12  |
+| 80    | 5          | 5/50 = 0,10  |
+
+Cada proporção é obtida dividindo a frequência do valor pelo total de 50 observações.
+
+#### Exercício: Tabela de Frequência
+Queremos estudar o número de erros de impressão de um livro. A tabela abaixo apresenta os dados coletados em uma amostra de 50 páginas:
 
 | **Erros** | **Frequência** |
 |-----------|----------------|
@@ -11,38 +45,74 @@ Quer-se estudar o número de erros de impressão de um livro. A tabela abaixo ap
 | 3         | 1              |
 | 4         | 1              |
 
-(a) Qual o número médio de erros por página?  
-(b) Qual o número mediano?  
-(c) Qual é o desvio padrão?  
-(d) Construa um gráfico de barras para representar a distribuição de frequências.  
-(e) Se o livro tem 500 páginas, qual é o número total de erros esperado no livro?
+<div>
+a) Qual o número médio de erros por página?<br>  
+b) Qual o número mediano?<br>  
+c) Qual é o desvio padrão?<br>  
+d) Se o livro tem 500 páginas, qual é o número total de erros esperado no livro?
+e) Construa um gráfico de barras para representar a distribuição de frequências de erros por página.<br>
+</div>
 
-### **Exercício 2: Taxas de Juros**
-As taxas de juros recebidas por 10 ações durante um certo período foram (em porcentagem):  
-2,59; 2,64; 2,60; 2,62; 2,57; 2,55; 2,61; 2,63; 2,64; 2,62.  
+***Respostas***
 
-(a) Calcule a média das taxas de juros.  
-(b) Determine a mediana.  
-(c) Encontre o desvio padrão das taxas.
+a) Calcule a média ponderada dos erros:
+\[
+\bar{x} = \frac{0\cdot25 + 1\cdot20 + 2\cdot3 + 3\cdot1 + 4\cdot1}{50} = \frac{0 + 20 + 6 + 3 + 4}{50} = \frac{33}{50} \approx 0,66.
+\]
 
-### **Exercício 3: Número de Casas por Quarteirão**
-Os dados sobre o número de casas em quarteirões de uma cidade são:
+b) Com 50 observações, a mediana é a média dos valores da 25ª e 26ª posição.
 
-2, 2, 3, 2, 3, 4, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 18, 20, 21, 22, 23, 24,  
-25, 26, 27, 28, 30, 31, 32, 33, 35, 37, 39, 40, 42, 45, 46, 50, 55, 60, 65, 70, 80, 85, 90, 97.
+- As 25 primeiras páginas (posição 1 a 25) têm 0 erros.
+- A partir da 26ª página, temos 1 erro (pois as 20 ocorrências de 1 erro preenchem as posições 26 a 45).
 
-(a) Use **cinco intervalos de classes** e construa um histograma.  
-(b) Calcule uma medida de posição central (média ou mediana) e uma medida de dispersão (desvio padrão ou variância).
+Assim, a mediana é:
+\[
+\text{Mediana} = \frac{0 + 1}{2} = 0,5.
+\]
 
-### **Exercício 4: Comparação entre Média e Mediana**
-Dê um exemplo prático em que a mediana seja uma medida mais adequada do que a média para descrever um conjunto de dados. Justifique sua escolha.
+c) Primeiro, calculamos o somatório dos quadrados das diferenças entre cada valor e a média, ponderado pela frequência:
 
-### **Exercício 5: Diferença entre Média e Mediana**
-Com os mesmos dados do Exercício 3, represente os dados em um histograma e responda:  
-(a) A média e a mediana coincidem?  
-(b) Em qual tipo de distribuição os valores da média e mediana são sempre iguais?
+1. Para \(x=0\):  
+   Diferença: \(0 - 0,66 = -0,66\); quadrado: \(0,4356\).  
+   Contribuição: \(25 \times 0,4356 = 10,89\).
 
-### **Exercício 6: Número de Filhos em Famílias**
+2. Para \(x=1\):  
+   Diferença: \(1 - 0,66 = 0,34\); quadrado: \(0,1156\).  
+   Contribuição: \(20 \times 0,1156 = 2,312\).
+
+3. Para \(x=2\):  
+   Diferença: \(2 - 0,66 = 1,34\); quadrado: \(1,7956\).  
+   Contribuição: \(3 \times 1,7956 = 5,3868\).
+
+4. Para \(x=3\):  
+   Diferença: \(3 - 0,66 = 2,34\); quadrado: \(5,4756\).  
+   Contribuição: \(1 \times 5,4756 = 5,4756\).
+
+5. Para \(x=4\):  
+   Diferença: \(4 - 0,66 = 3,34\); quadrado: \(11,1556\).  
+   Contribuição: \(1 \times 11,1556 = 11,1556\).
+
+Somando as contribuições:
+\[
+S = 10,89 + 2,312 + 5,3868 + 5,4756 + 11,1556 \approx 35,22.
+\]
+
+A variância é:
+\[
+\sigma^2 = \frac{35,22}{50} \approx 0,7044.
+\]
+
+O desvio padrão é:
+\[
+\sigma \approx \sqrt{0,7044} \approx 0,84.
+\]
+
+d)Se a média de erros por página é aproximadamente 0,66, o total esperado de erros em 500 páginas é:
+\[
+\text{Total} = 0,66 \times 500 \approx 330 \text{ erros}.
+\]
+
+#### Exercício: Tabelas de Frequência 2
 A tabela abaixo resume o número de filhos de 100 famílias:
 
 | **Número de Filhos** | **Frequência de Famílias** |
@@ -55,36 +125,58 @@ A tabela abaixo resume o número de filhos de 100 famílias:
 | 5                    | 4                          |
 | Mais que 5           | 3                          |
 
-(a) Qual é a mediana do número de filhos?  
-(b) Qual é a moda do número de filhos?  
-(c) Que dificuldades você enfrentaria para calcular a média exata do número de filhos? Faça uma suposição razoável e calcule a média.
+a) Qual é a moda do número de filhos?  
+b) Que dificuldades você enfrentaria para calcular a média exata do número de filhos?
 
-### **Exercício 7: Massa Corporal**
+***Respostas:***
+a) A moda é 2, pois é o número de filhos que ocorre com maior frequência (28 famílias).
+
+b) O desafio para calcular a média exata é a categoria "Mais que 5", que não especifica quantos filhos, exatamente, estão incluídos. Sem saber o valor exato para essas 3 famílias, não é possível determinar com precisão o total de filhos, o que impede o cálculo exato da média.
+
+#### Exercício: Comparação entre Média e Mediana
+Com respeito às medidas de centralidade, 
+<div>
+a) A média e a mediana sempre coincidem?<br>  
+b) Dê um exemplo prático em que a mediana seja uma medida mais adequada do que a média para descrever um conjunto de dados. Justifique sua escolha.<br>
+c) Em qual tipo de distribuição os valores da média e mediana são sempre iguais?
+</div>
+
+***Respostas:***
+a) Não, a média e a mediana não coincidem sempre. Elas são iguais apenas quando os dados estão distribuídos de maneira perfeitamente simétrica.
+
+b) Um exemplo prático é a distribuição de renda em uma cidade. Geralmente, a renda tem uma distribuição assimétrica à direita, em que alguns poucos indivíduos possuem rendas muito altas que elevam a média. Nesse caso, a mediana — que indica o valor central dos dados — fornece uma medida mais representativa da "renda típica", pois não é afetada por esses valores extremos.
+
+c) Em distribuições simétricas, como na distribuição normal, os valores da média e da mediana são sempre iguais.
+
+#### Exercício: Tabela de Classes
 A tabela abaixo apresenta a distribuição de frequência da massa corporal ($m$) de um grupo de pessoas. Podemos ter certeza que a **massa corporal média** desse grupo é superior a 70 kg? Justifique sua resposta.
 
-| **Massa Corporal ($m$) (em kg)** | **Frequências** |
-|------------------------------------|-----------------|
-| $40 \leq m < 50$                 | 5               |
-| $50 \leq m < 60$                 | 15              |
+| **Massa Corporal ($m$ em kg)** | **Frequências** |
+|----------------------------------|-----------------|
+| $40 \leq m < 45$                 | 5               |
+| $45 \leq m < 60$                 | 15              |
 | $60 \leq m < 70$                 | 25              |
-| $70 \leq m < 80$                 | 30              |
-| $80 \leq m < 90$                 | 20              |
+| $70 \leq m < 90$                 | 50              |
 | $90 \leq m < 100$                | 5               |
-| **Total**                          | 100             |
+| **Total**                        | 100             |
 
-**Instruções:**
-1. Calcule a média ponderada da massa corporal $\bar{m}$ utilizando os valores médios de cada classe.
-2. Compare o valor encontrado com o limite superior de 70 kg e justifique sua resposta.
+***Respostas:***
+Como não temos certeza das massas de cada indivíduo, vamos considerar o caso extremo (mas possível) em que todos tem o menor peso de suas classes. Assim, utilizando os valores mínimos de cada classe, temos:
 
-**Fórmula da Média:**
+- Para \(40 \le m < 45\): \(m = 40\) kg, frequência 5  
+- Para \(45 \le m < 60\): \(m = 45\) kg, frequência 15  
+- Para \(60 \le m < 70\): \(m = 60\) kg, frequência 25  
+- Para \(70 \le m < 90\): \(m = 70\) kg, frequência 50  
+- Para \(90 \le m < 100\): \(m = 90\) kg, frequência 5  
 
-$$\bar{m} = \frac{\sum_{i} f_i \cdot x_i}{\sum_{i} f_i}$$
+Neste caso, a média ponderada será
+\[
+\mu = (5(40) + 15(45) + 25(60) + 50(70) + 5(90)) / 100 = 63{,}25.
+\]
 
-onde:
-- $f_i$ é a frequência da classe $i$,
-- $x_i$ é o ponto médio da classe $i$.
+Portanto, ao utilizar os valores mínimos, a massa corporal média estimada será de aproximadamente 63,25 kg que é inferior a 70 kg.
 
-### **Exercício 8: Medidas de Dispersão**
+#### **Exercício 8: Medidas de Dispersão**
 Quais dessas medidas são **medidas de dispersão**?
 
 I – média;  
@@ -93,54 +185,27 @@ III – variância;
 IV – desvio padrão;  
 V – amplitude interquartil.
 
-### **Exercício 9: Erro de Medição**
-A média de nossas medições foi de $1.7 \, \text{m}$ e a variância foi de $0.25 \, \text{m}^2$, mas descobrimos que nosso instrumento de medição estava com defeito, marcando sempre $25 \, \text{cm}$ acima do valor real. Será que podemos corrigir o erro ou devemos repetir todas as medições?
+***Respostas:***
+III, IV e V.
 
-### **Exercício 10: Construção de Boxplot**
-Utilizando os dados do **Exemplo 2.3, Capítulo 2**, construa o **boxplot** para representar graficamente a distribuição. Responda:  
-(a) Existe alguma simetria na distribuição?  
-(b) Existem valores discrepantes (outliers)?  
-(c) O que pode ser concluído sobre a dispersão dos dados?
+#### Exercício: Transformação nos Dados
+Nosso laboratório realizou 150 medições da altura de cactos e obtivemos média igual a $1.7 \, \text{m}$ e variância de $0.25 \, \text{m}^2$, mas descobrimos que nosso instrumento de medição estava com defeito, marcando sempre $25 \, \text{cm}$ acima do valor real. 
 
-### **Exercício 11: Boxplot para o Problema 3**
-Refaça o exercício anterior utilizando os dados do **Problema 3** (número de casas por quarteirão). Responda:  
-(a) Compare o boxplot dos dados do Problema 3 com o do Exemplo 2.3. Qual das distribuições apresenta maior variabilidade?  
-(b) Há diferenças significativas entre os quartis das duas distribuições?  
-(c) Os outliers (se existirem) aparecem em ambos os conjuntos de dados? Justifique.
+<div>
+a) Será que podemos corrigir o erro na média e variância ou devemos repetir todas as medições?<br>
+b) O que aconteceria com a média, mediana, moda e variância se os dados fossem multiplicados por 2?
+</div>
 
-### **Exercício 12: Histograma dos Dados de Massa Corporal**
-Construa um **histograma** dos dados representados na tabela do **Exercício 1**.
+#### Exercício: Boxplot
+Construa o **boxplot** das informações do exercício "Dados Brutos" e, com base apenas nele, responda:  
+a) Existe alguma simetria na distribuição?  
+b) Existem valores discrepantes (outliers)?  
+c) O que pode ser concluído sobre a dispersão dos dados?
 
-### **Exercício 13: Tabela de Frequência**
-Construa a **tabela de frequência** do histograma abaixo representado.
+#### Exercício: Histograma
+Construa um **histograma de densidade de frequência** dos dados apresentados no exercício **Tabela de Classes**.
 
-*(Nota: É necessário que o histograma esteja fornecido para este exercício.)*
-
-### **Exercício 14: Box Plot das Idades**
-Construa um **box plot** das idades $\{24, 25, 25, 27, 30, 32, 32, 35, 43\}$ abaixo e verifique se há algum dado discrepante.
-
-### **Exercício 15: Cálculo de Quartis e Percentis**
-Utilize os dados do **Problema 3** (número de casas por quarteirão) para responder às questões abaixo:
-
-(a) Determine os três quartis $q_1$ (primeiro quartil), $q_2$ (mediana), e $q_3$ (terceiro quartil).  
-(b) Calcule o percentil 10 ($q(0,1)$).  
-(c) Calcule o percentil 90 ($q(0,9)$).  
-(d) Interprete os resultados: o que os valores dos quartis e percentis indicam sobre a dispersão e concentração dos dados?
-
-### **Exercício 16: Assimetria dos Dados**
-Os dados acima apresentados (do **Exercício 8**) apresentam alguma assimetria?
-
-### **Exercício 17: Transformações nos Dados**
-Considere uma série de dados. Responda como a **mediana**, a **média** e o **desvio padrão** são afetados nas seguintes situações:
-
-a) Cada observação é multiplicada por 2.  
-b) Soma-se 10 a cada observação.  
-c) Subtrai-se a média geral $\bar{x}$ de cada observação.  
-d) De cada observação subtrai-se $\bar{x}$ e divide-se pelo desvio padrão $s$.
-
-**Dica:** Analise os efeitos dessas transformações nas medidas de posição e dispersão.
-
-### **Exercício 18: Coeficiente de Variação e Comparação de Unidades**
+#### Exercício: Coeficiente de Variação e Comparação de Unidades
 Considere os seguintes conjuntos de dados:
 
 **Conjunto A:** Alturas de jogadores de basquete (em centímetros)  
@@ -149,12 +214,11 @@ Considere os seguintes conjuntos de dados:
 **Conjunto B:** Salários mensais de executivos (em milhares de reais)  
 15, 22, 18, 25, 19, 23, 20, 24
 
-(a) Calcule a média e o desvio padrão para cada conjunto.  
-(b) Calcule o coeficiente de variação (CV) para ambos os conjuntos.  
-(c) Qual conjunto apresenta maior variabilidade relativa? Justifique por que o CV é mais adequado para esta comparação do que o desvio padrão.  
-(d) Em quais situações práticas o uso do CV seria mais apropriado do que o desvio padrão?
+a) Calcule o coeficiente de variação (CV) para ambos os conjuntos.  
+b) Qual conjunto apresenta maior variabilidade relativa? Justifique por que o CV é mais adequado para esta comparação do que o desvio padrão.  
+c) Em quais situações práticas o uso do CV seria mais apropriado do que o desvio padrão?
 
-### **Exercício 19: Correlação entre variáveis quantitativas**
+#### Exercício: Correlação entre variáveis quantitativas
 Determine se $Y$ ou $Z$ estão mais correlacionadas com a variável $X$. Justifique sua resposta.
 
 | $X$    | $Y$    | $Z$    |
@@ -165,7 +229,7 @@ Determine se $Y$ ou $Z$ estão mais correlacionadas com a variável $X$. Justifi
 | 37     | 52     | 80     |
 | 58     | 96     | 50     |
 
-### **Exercício 20: Correlação entre variáveis qualitativas**
+#### Exercício: Correlação entre variáveis qualitativas
 Considerando os dados da tabela abaixo, podemos dizer que há correlação entre o sexo e a frequência de atividades físicas? Justifique sua resposta.
 
 | **Frequência de Atividades** | **H**  | **M**  | **Total** |
@@ -176,7 +240,7 @@ Considerando os dados da tabela abaixo, podemos dizer que há correlação entre
 | **Total**                    | 193    | 209    | 402       |
 
 
-### **Exercício 21: Correlação entre variáveis qualitativas e quantitativas**
+#### Exercício: Correlação entre variáveis qualitativas e quantitativas
 
 Uma empresa deseja analisar se há uma relação entre o setor de atuação dos funcionários (Administrativo, Financeiro, Operacional) e o salário mensal recebido. Para isso, foram coletados dados de uma amostra de funcionários, conforme a tabela abaixo:
 
@@ -194,8 +258,5 @@ Uma empresa deseja analisar se há uma relação entre o setor de atuação dos 
 | Carlos Souza    | Operacional    | 2.800                   |
 
 
-### **Exercício 22: Z-score 1**
-Sabendo que a média e a variância das notas dos alunos de Cálculo da turma $A$ foram iguais a 4, qual é o **Z-score** de João se sua nota foi 8?
-
-### **Exercício 23: Z-score 2**
-Na turma $B$, a média das notas em Cálculo foi de 7 e o desvio padrão foi 1. Sabendo que Flávio também tirou 9, você acha que Flávio se saiu melhor que João quando comparado aos demais alunos de suas respectivas turmas? Justifique sua resposta.
+#### Exercício: Z-score
+A média e a variância das notas dos alunos de Cálculo da turma $A$ foram iguais a 4. Na turma $B$, a média das notas em Cálculo foi de 7 e o desvio padrão foi 1. João é um aluno da turma $A$, Flávio é um aluno da turma $B$ e ambos tiraram 8. Você acha que Flávio se saiu melhor que João quando comparado aos demais alunos de suas respectivas turmas? Justifique sua resposta.
